@@ -1,0 +1,37 @@
+{
+    "kind": "collectionType",
+    "collectionName": "education_levels",
+    "info": {
+        "singularName": "education-level",
+        "pluralName": "education-levels",
+        "displayName": "education",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "degree": {
+            "type": "string"
+        },
+        "department": {
+            "type": "string"
+        },
+        "university": {
+            "type": "string"
+        },
+        "startDate": {
+            "type": "date"
+        },
+        "endDate": {
+            "type": "date"
+        },
+        "profileDetail": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::profile-detail.profile-detail",
+            "inversedBy": "educations"
+        }
+    }
+}
