@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profile_details",
+  "info": {
+    "singularName": "profile-detail",
+    "pluralName": "profile-details",
+    "displayName": "profileDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "yearsOfExperience": {
+      "type": "integer",
+      "min": 0
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "educations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::education-level.education-level",
+      "mappedBy": "profileDetail"
+    },
+    "jobLevel": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job-level.job-level"
+    },
+    "workingCities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::city.city",
+      "mappedBy": "profileDetails"
+    },
+    "jobRoles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job-role.job-role",
+      "inversedBy": "profileDetails"
+    },
+    "currentJobStatus": {
+      "type": "string"
+    },
+    "experiences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::experience.experience",
+      "mappedBy": "profileDetail"
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::language.language",
+      "inversedBy": "profile_details"
+    },
+    "Nationality": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "militaryService": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::military-service.military-service",
+      "inversedBy": "profileDetails"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "birthDate": {
+      "type": "date"
+    },
+    "jobRequest": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job-request.job-request"
+    }
+  }
+}
