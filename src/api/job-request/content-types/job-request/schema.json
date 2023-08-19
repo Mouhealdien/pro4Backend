@@ -26,6 +26,12 @@
         "Rejected",
         "Accepted"
       ]
+    },
+    "profileDetail": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profile-detail.profile-detail",
+      "inversedBy": "jobRequests"
     }
   }
 }

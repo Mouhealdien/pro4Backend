@@ -108,6 +108,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "jobRequests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-request.job-request",
+      "mappedBy": "profileDetail"
     }
   }
 }
