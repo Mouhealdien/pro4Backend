@@ -12,10 +12,6 @@
     },
     "pluginOptions": {},
     "attributes": {
-        "city": {
-            "type": "string",
-            "required": true
-        },
         "address": {
             "type": "string"
         },
@@ -92,6 +88,12 @@
             "relation": "oneToMany",
             "target": "api::job.job",
             "mappedBy": "company"
+        },
+        "cities": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::city.city",
+            "inversedBy": "companies"
         }
     }
 }

@@ -29,6 +29,12 @@
             "relation": "manyToMany",
             "target": "api::profile-detail.profile-detail",
             "inversedBy": "workingCities"
+        },
+        "companies": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::company.company",
+            "mappedBy": "cities"
         }
     }
 }
