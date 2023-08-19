@@ -86,6 +86,12 @@
             "relation": "oneToOne",
             "target": "plugin::users-permissions.user",
             "inversedBy": "company"
+        },
+        "jobs": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::job.job",
+            "mappedBy": "company"
         }
     }
 }
