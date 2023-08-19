@@ -83,16 +83,17 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "company"
     },
-    "cities": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::city.city"
-    },
     "jobs": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job.job",
       "mappedBy": "company"
+    },
+    "cities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::city.city",
+      "inversedBy": "companies"
     }
   }
 }

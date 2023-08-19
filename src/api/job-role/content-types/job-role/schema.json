@@ -32,6 +32,16 @@
       "relation": "manyToMany",
       "target": "api::profile-detail.profile-detail",
       "mappedBy": "jobRoles"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
