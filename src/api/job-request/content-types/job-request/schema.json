@@ -31,7 +31,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::profile-detail.profile-detail",
-      "inversedBy": "jobRequests"
+      "inversedBy": "jobRequest"
     }
   }
 }

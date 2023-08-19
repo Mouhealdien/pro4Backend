@@ -88,11 +88,6 @@
     "birthDate": {
       "type": "date"
     },
-    "jobRequest": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::job-request.job-request"
-    },
     "Skills": {
       "type": "richtext"
     },
@@ -100,16 +95,17 @@
       "type": "integer"
     },
     "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "jobRequests": {
+    "jobRequest": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job-request.job-request",
