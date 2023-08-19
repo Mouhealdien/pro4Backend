@@ -69,7 +69,7 @@
             "type": "relation",
             "relation": "oneToOne",
             "target": "api::profile-detail.profile-detail",
-            "inversedBy": "user"
+            "mappedBy": "user"
         },
         "company": {
             "type": "relation",

@@ -92,6 +92,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::job-request.job-request"
+    },
+    "Skills": {
+      "type": "richtext"
     }
   }
 }
