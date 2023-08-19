@@ -95,6 +95,9 @@
         },
         "Skills": {
             "type": "richtext"
+        },
+        "age": {
+            "type": "integer"
         }
     }
 }
