@@ -33,9 +33,6 @@
     "education": {
       "type": "string"
     },
-    "experience": {
-      "type": "string"
-    },
     "salary": {
       "type": "biginteger"
     },
@@ -98,6 +95,9 @@
       "relation": "manyToOne",
       "target": "api::company.company",
       "inversedBy": "jobs"
+    },
+    "carrerLevel": {
+      "type": "string"
     }
   }
 }
