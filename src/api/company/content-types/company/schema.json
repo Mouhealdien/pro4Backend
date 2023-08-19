@@ -12,10 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "city": {
-      "type": "string",
-      "required": true
-    },
     "address": {
       "type": "string"
     },
@@ -41,7 +37,7 @@
     "phone": {
       "type": "string",
       "unique": true,
-      "required": true
+      "required": false
     },
     "officePhone": {
       "type": "string"
@@ -68,7 +64,7 @@
     "profileImg": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ]
@@ -81,11 +77,22 @@
         "images"
       ]
     },
-    "users": {
+    "user": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "company"
+    },
+    "cities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::city.city"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job.job",
+      "mappedBy": "company"
     }
   }
 }

@@ -75,7 +75,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::company.company",
-      "mappedBy": "users"
+      "mappedBy": "user"
     }
   }
 }

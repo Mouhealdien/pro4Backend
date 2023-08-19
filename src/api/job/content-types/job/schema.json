@@ -76,9 +76,6 @@
     "address": {
       "type": "string"
     },
-    "company": {
-      "type": "string"
-    },
     "JobDate": {
       "type": "date"
     },
@@ -95,6 +92,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::job-request.job-request"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "jobs"
     }
   }
 }
