@@ -94,6 +94,10 @@
       "relation": "manyToMany",
       "target": "api::city.city",
       "inversedBy": "companies"
+    },
+    "bio": {
+      "type": "text",
+      "required": true
     }
   }
 }

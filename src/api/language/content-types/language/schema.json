@@ -4,30 +4,45 @@
   "info": {
     "singularName": "language",
     "pluralName": "languages",
-    "displayName": "language"
+    "displayName": "language",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "rate": {
-      "type": "integer"
-    },
     "jobs": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::job.job",
       "mappedBy": "languages"
     },
-    "profile_details": {
+    "profileDetail": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::profile-detail.profile-detail",
-      "mappedBy": "languages"
+      "inversedBy": "languages"
+    },
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Arabic",
+        "English",
+        "French",
+        "Russian"
+      ]
+    },
+    "rate": {
+      "type": "enumeration",
+      "enum": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
     }
   }
 }

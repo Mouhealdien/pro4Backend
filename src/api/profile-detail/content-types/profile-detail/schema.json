@@ -54,15 +54,6 @@
       "target": "api::experience.experience",
       "mappedBy": "profileDetail"
     },
-    "languages": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::language.language",
-      "inversedBy": "profile_details"
-    },
-    "Nationality": {
-      "type": "string"
-    },
     "firstName": {
       "type": "string"
     },
@@ -109,6 +100,19 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::job-request.job-request",
+      "mappedBy": "profileDetail"
+    },
+    "nationality": {
+      "type": "enumeration",
+      "enum": [
+        "Syrian",
+        "Palestinian"
+      ]
+    },
+    "languages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::language.language",
       "mappedBy": "profileDetail"
     }
   }

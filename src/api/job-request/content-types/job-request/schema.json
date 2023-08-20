@@ -25,7 +25,9 @@
         "Reviewed",
         "Rejected",
         "Accepted"
-      ]
+      ],
+      "default": "Pending",
+      "required": false
     },
     "profileDetail": {
       "type": "relation",

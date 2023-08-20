@@ -42,6 +42,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "experiences": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::experience.experience",
+      "mappedBy": "jobRoles"
     }
   }
 }
