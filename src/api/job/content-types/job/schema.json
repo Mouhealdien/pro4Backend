@@ -23,24 +23,11 @@
         "Female"
       ]
     },
-    "ageRange": {
-      "type": "enumeration",
-      "enum": [
-        "from 20  to 30",
-        "from 30 to 40"
-      ]
-    },
     "education": {
       "type": "string"
     },
     "salary": {
       "type": "biginteger"
-    },
-    "languages": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::language.language",
-      "inversedBy": "jobs"
     },
     "jobRoles": {
       "type": "relation",
@@ -98,6 +85,10 @@
     },
     "carrerLevel": {
       "type": "string"
+    },
+    "age": {
+      "type": "integer",
+      "min": 18
     }
   }
 }
